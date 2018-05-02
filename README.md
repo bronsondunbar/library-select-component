@@ -34,9 +34,18 @@ hideDropdown (event) {
 
 selectOptions () {
   const data = [
-    { name: 'Item one', id: 'one' },
-    { name: 'Item two', id: 'two' },
-    { name: 'Item three', id: 'three' }
+    {
+      name: 'Item one',
+      id: 'one'
+    },
+    {
+      name: 'Item two',
+      id: 'two'
+    },
+    {
+      name: 'Item three',
+      id: 'three'
+    }
   ]
 
   return data.map((data) => {
