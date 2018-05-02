@@ -61,16 +61,24 @@ selectOptions () {
   })
 }
 
-{!this.state.activeSelect
-  ? <SelectComponent
-      selectOptions={this.selectOptions()}
-      showOptions={this.showOptions.bind(this)}
-      placeHolder="Please select..."
-      selectedText={null} />
-  : <SelectComponent
-      selectOptions={this.selectOptions()}
-      showOptions={this.showOptions.bind(this)}
-      placeHolder="Please select..."
-      selectedText={this.state.activeSelect} />
+render () {
+
+  return (
+
+    {!this.state.activeSelect
+      ? <SelectComponent
+          selectOptions={this.selectOptions()}
+          showOptions={this.showOptions.bind(this)}
+          placeHolder="Please select..."
+          selectedText={null} />
+      : <SelectComponent
+          selectOptions={this.selectOptions()}
+          showOptions={this.showOptions.bind(this)}
+          placeHolder="Please select..."
+          selectedText={this.state.activeSelect} />
+    }
+
+  )
+
 }
 ```
