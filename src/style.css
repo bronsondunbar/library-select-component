@@ -4,6 +4,7 @@
  * Copyright 2011-2018 Twitter, Inc.
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
  */
+@import url("https://fonts.googleapis.com/css?family=Montserrat:400,400i,500,500i,700,700i");
 :root {
   --blue: #007bff;
   --indigo: #6610f2;
@@ -7130,17 +7131,20 @@ a.text-dark:hover, a.text-dark:focus {
 
 /*# sourceMappingURL=bootstrap.css.map */
 /* Colors */
+/* Messages */
+/* Shadows */
+/* Fonts */
 /* Screen sizes */
 /* Dropdowns */
 .btn-group .btn-default {
   background: #ffffff;
-  border: 1px solid #262626;
-  color: #262626;
+  border: 1px solid #a0a0a0;
+  color: #707070;
   min-width: 1px;
-  transition: all 0.3s; }
+  transition: all 0.3s;
+  box-shadow: none; }
   .btn-group .btn-default:hover, .btn-group .btn-default:focus {
-    background: #ffd100;
-    color: #262626; }
+    color: #2bbde0; }
 
 .btn-group .active {
   background: #ffd100;
@@ -7153,16 +7157,19 @@ a.text-dark:hover, a.text-dark:focus {
   min-width: 10rem !important; }
 
 .dropdown-menu {
-  width: 100%; }
+  width: 100%;
+  border-color: #a0a0a0; }
   .dropdown-menu .dropdown-item {
     padding: 0.5rem 1.5rem;
-    color: #212529 !important; }
+    color: #707070 !important; }
     .dropdown-menu .dropdown-item .active {
-      background: #ffd100;
-      color: #262626; }
+      background: #f8f9fa;
+      color: #2bbde0; }
     .dropdown-menu .dropdown-item:active {
-      background: #ffd100;
-      color: #262626; }
+      background: #f8f9fa;
+      color: #2bbde0 !important; }
+    .dropdown-menu .dropdown-item:hover, .dropdown-menu .dropdown-item:focus {
+      color: #2bbde0 !important; }
 
 body {
   font-family: Arial, 'Sans Serif'; }
