@@ -62,9 +62,7 @@ selectOptions () {
 }
 
 render () {
-
   return (
-
     {!this.state.activeSelect
       ? <SelectComponent
           selectOptions={this.selectOptions()}
@@ -77,8 +75,6 @@ render () {
           placeHolder="Please select..."
           selectedText={this.state.activeSelect} />
     }
-
   )
-
 }
 ```
