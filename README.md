@@ -3,12 +3,13 @@
 
 Select component for React
 
-| Prop          | Default          | Values                                  |
-| :------------ |:---------------- | :-------------------------------------- |
-| selectOptions | none             | selectOptions function to display data  |
-| showOptions   | none             | showOptions function to toggle dropdown |
-| placeHolder   | Please select... | Default select text                     |
-| selectedText  | none             | Selected text to be displayed           |
+| Prop          | Values               |
+| :------------ | :------------------- |
+| selectOptions | Object               |
+| showOptions   | showOptions function |
+| hideOptions   | hideOptions function |
+| placeHolder   | String               |
+| selectedText  | String               |
 
 ```
 constructor(props) {
@@ -27,7 +28,7 @@ showOptions (event) {
   event.target.offsetParent.lastChild.classList.toggle("show");
 }
 
-hideDropdown (event) {
+hideOptions (event) {
   event.preventDefault();
   event.target.offsetParent.classList.toggle("show");
 }
@@ -53,7 +54,7 @@ selectOptions () {
       <a
         className="dropdown-item"
         key={data.id}
-        onMouseUp={this.hideDropdown.bind(this)}
+        onMouseUp={this.hideOptions.bind(this)}
         onClick={this.activeSelect.bind(this)} >
           {data.name}
       </a>
