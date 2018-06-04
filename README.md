@@ -3,15 +3,47 @@
 
 Select component for React
 
-| Prop          | Values               |
-| :------------ | :------------------- |
-| selectOptions | Object               |
-| showOptions   | showOptions function |
-| hideOptions   | hideOptions function |
-| placeHolder   | String               |
-| selectedText  | String               |
+Install and save component as a dependency
 
 ```
+
+npm install --save library-select-component
+
+```
+
+Import component into your app
+
+```
+
+import Select from 'library-select-component'
+
+```
+
+Create an array of objects with the keys being name and id
+
+```
+
+const data = [
+  {
+    name: 'Item one',
+    id: 'one'
+  },
+  {
+    name: 'Item two',
+    id: 'two'
+  },
+  {
+    name: 'Item three',
+    id: 'three'
+  }
+]
+
+```
+
+Create and assign active select state with empty value
+
+```
+
 constructor(props) {
   super(props)
 
@@ -20,18 +52,42 @@ constructor(props) {
   }
 }
 
+```
+
+Create the function that will handle the active select state
+
+```
+
 activeSelect (event) {
   this.setState({ activeSelect: event.target.innerText })
 }
+
+```
+
+Create the function that will show the select options
+
+```
 
 showOptions (event) {
   event.target.offsetParent.lastChild.classList.toggle("show");
 }
 
+```
+
+Create the function that will hide the select options
+
+```
+
 hideOptions (event) {
   event.preventDefault();
   event.target.offsetParent.classList.toggle("show");
 }
+
+```
+
+Create the function that will generate the select options
+
+```
 
 selectOptions () {
   const data = [
@@ -62,6 +118,12 @@ selectOptions () {
   })
 }
 
+```
+
+Render the component with the functions we created, object array as well as any other props that are needed
+
+```
+
 render () {
   return (
     {!this.state.activeSelect
@@ -78,4 +140,14 @@ render () {
     }
   )
 }
+
 ```
+
+
+| Prop          | Values               |
+| :------------ | :------------------- |
+| selectOptions | Object               |
+| showOptions   | showOptions function |
+| hideOptions   | hideOptions function |
+| placeHolder   | String               |
+| selectedText  | String               |

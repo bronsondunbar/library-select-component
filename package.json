@@ -1,6 +1,6 @@
 {
   "name": "library-select-component",
-  "version": "1.0.5",
+  "version": "1.0.8",
   "description": "Select component for React",
   "main": "./lib/Select.js",
   "license": "MIT",
