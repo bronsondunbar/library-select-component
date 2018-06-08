@@ -124,20 +124,15 @@ Render the component with the functions we created, object array as well as any 
 
 ```
 
-render () {
+render() {
   return (
-    {!this.state.activeSelect
-      ? <SelectComponent
-          selectOptions={this.selectOptions()}
-          showOptions={this.showOptions.bind(this)}
-          placeHolder="Please select..."
-          selectedText={null} />
-      : <SelectComponent
-          selectOptions={this.selectOptions()}
-          showOptions={this.showOptions.bind(this)}
-          placeHolder="Please select..."
-          selectedText={this.state.activeSelect} />
-    }
+    <Fragment>
+      <Select
+        selectOptions={this.selectOptions()}
+        showOptions={this.showOptions.bind(this)}
+        placeHolder="Please select..."
+        selectedText={!this.state.activeSelect ? null : this.state.activeSelect} />
+    </Fragment>
   )
 }
 
