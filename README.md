@@ -23,7 +23,7 @@ Create an array of objects with the keys being name and id
 
 ```
 
-const data = [
+const selectData = [
   {
     name: 'Item one',
     id: 'one'
@@ -90,7 +90,7 @@ Create the function that will generate the select options
 ```
 
 selectOptions () {
-  const data = [
+  const selectData = [
     {
       name: 'Item one',
       id: 'one'
@@ -105,7 +105,7 @@ selectOptions () {
     }
   ]
 
-  return data.map((data) => {
+  return selectData.map((data) => {
     return (
       <a
         className="dropdown-item"
