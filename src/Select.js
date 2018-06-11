@@ -3,7 +3,7 @@ import classNames from 'classnames';
 
 import './style.css';
 
-const SelectComponent = ({ selectOptions, showOptions, selectedText, placeHolder }) => {
+const SelectComponent = ({ selectOptions, showSelectOptions, selectedText, placeHolder }) => {
 
   return (
     <div>
@@ -12,7 +12,7 @@ const SelectComponent = ({ selectOptions, showOptions, selectedText, placeHolder
             <button
               className="btn btn-default dropdown-toggle"
               type="button"
-              onMouseUp={(event) => showOptions(event)} >
+              onMouseUp={(event) => showSelectOptions(event)} >
               {!selectedText
                 ? "Please select..."
                 : selectedText }
@@ -25,7 +25,7 @@ const SelectComponent = ({ selectOptions, showOptions, selectedText, placeHolder
           <button
             className="btn btn-default dropdown-toggle"
             type="button"
-            onMouseUp={(event) => showOptions(event)} >
+            onMouseUp={(event) => showSelectOptions(event)} >
             {!selectedText
               ? placeHolder
               : selectedText }

@@ -68,7 +68,7 @@ Create the function that will show the select options
 
 ```
 
-showOptions (event) {
+showSelectOptions (event) {
   event.target.offsetParent.lastChild.classList.toggle("show");
 }
 
@@ -78,7 +78,7 @@ Create the function that will hide the select options
 
 ```
 
-hideOptions (event) {
+hideSelectOptions (event) {
   event.preventDefault();
   event.target.offsetParent.classList.toggle("show");
 }
@@ -110,7 +110,7 @@ selectOptions () {
       <a
         className="dropdown-item"
         key={data.id}
-        onMouseUp={this.hideOptions.bind(this)}
+        onMouseUp={this.hideSelectOptions.bind(this)}
         onClick={this.activeSelect.bind(this)} >
           {data.name}
       </a>
@@ -129,7 +129,7 @@ render() {
     <Fragment>
       <Select
         selectOptions={this.selectOptions()}
-        showOptions={this.showOptions.bind(this)}
+        showSelectOptions={this.showSelectOptions.bind(this)}
         placeHolder="Please select..."
         selectedText={!this.state.activeSelect ? null : this.state.activeSelect} />
     </Fragment>
@@ -139,10 +139,10 @@ render() {
 ```
 
 
-| Prop          | Values               |
-| :------------ | :------------------- |
-| selectOptions | Object               |
-| showOptions   | showOptions function |
-| hideOptions   | hideOptions function |
-| placeHolder   | String               |
-| selectedText  | String               |
+| Prop              | Values                     |
+| :---------------- | :------------------------- |
+| selectOptions     | Object                     |
+| showSelectOptions | showSelectOptions function |
+| hideSelectOptions | hideSelectOptions function |
+| placeHolder       | String                     |
+| selectedText      | String                     |
