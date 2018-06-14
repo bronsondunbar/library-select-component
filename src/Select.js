@@ -3,12 +3,18 @@ import classNames from 'classnames';
 
 import './style.css';
 
-const SelectComponent = ({ selectOptions, showSelectOptions, selectedText, placeHolder }) => {
+const SelectComponent = ({ selectOptions, selectTheme, showSelectOptions, selectedText, placeHolder }) => {
+
+  let selectClass = classNames({
+    'btn-group': true,
+    'dropdown-bg-light': selectTheme == 'light' || selectTheme == null,
+    'dropdown-bg-dark': selectTheme == 'dark'
+  })
 
   return (
     <div>
       {!placeHolder
-        ? <div className="btn-group">
+        ? <div className={selectClass}>
             <button
               className="btn btn-default dropdown-toggle"
               type="button"
@@ -21,7 +27,7 @@ const SelectComponent = ({ selectOptions, showSelectOptions, selectedText, place
               {selectOptions}
             </div>
           </div>
-        : <div className="btn-group">
+        : <div className={selectClass}>
           <button
             className="btn btn-default dropdown-toggle"
             type="button"
@@ -39,4 +45,4 @@ const SelectComponent = ({ selectOptions, showSelectOptions, selectedText, place
   )
 }
 
-export default SelectComponent;
+export default SelectComponent

@@ -7137,37 +7137,65 @@ a.text-dark:hover, a.text-dark:focus {
 /* Screen sizes */
 /* Dropdowns */
 .btn-group .btn-default {
-  background: rgba(38, 38, 38, 0.8);
-  color: #ffffff;
+  padding: .475rem .75rem;
   min-width: 1px;
   transition: all 0.3s;
   box-shadow: none; }
-
-.btn-group .active {
-  background: #ffd100;
-  color: #262626; }
 
 .btn-group .btn-group .dropdown-toggle {
   min-width: 1px !important; }
 
 .dropdown-menu {
-  background: #262626;
   width: 100%;
   border: none; }
   .dropdown-menu .dropdown-item {
     padding: 0.5rem 1.5rem;
-    color: #ffffff !important;
     cursor: pointer;
     transition: all 0.3s; }
-    .dropdown-menu .dropdown-item .active {
-      background: #ffd100;
-      color: #262626; }
-    .dropdown-menu .dropdown-item:active {
-      background: #ffd100;
+
+.dropdown-bg-dark {
+  border-radius: 5px; }
+  .dropdown-bg-dark .btn-default {
+    background: #262626;
+    color: #ffffff; }
+  .dropdown-bg-dark .active {
+    background: #ffd100;
+    color: #262626; }
+  .dropdown-bg-dark .dropdown-menu {
+    background: #262626; }
+    .dropdown-bg-dark .dropdown-menu .dropdown-item {
+      color: #ffffff !important; }
+      .dropdown-bg-dark .dropdown-menu .dropdown-item .active {
+        background: #ffd100;
+        color: #262626; }
+      .dropdown-bg-dark .dropdown-menu .dropdown-item:active {
+        background: #ffd100;
+        color: #262626 !important; }
+      .dropdown-bg-dark .dropdown-menu .dropdown-item:hover, .dropdown-bg-dark .dropdown-menu .dropdown-item:focus {
+        background: #ffd100;
+        color: #262626 !important; }
+
+.dropdown-bg-light {
+  border-radius: 5px; }
+  .dropdown-bg-light .btn-default {
+    background: #f8f9fa;
+    color: #262626; }
+  .dropdown-bg-light .active {
+    background: #ffd100;
+    color: #262626; }
+  .dropdown-bg-light .dropdown-menu {
+    background: #f8f9fa; }
+    .dropdown-bg-light .dropdown-menu .dropdown-item {
       color: #262626 !important; }
-    .dropdown-menu .dropdown-item:hover, .dropdown-menu .dropdown-item:focus {
-      background: #ffd100;
-      color: #262626 !important; }
+      .dropdown-bg-light .dropdown-menu .dropdown-item .active {
+        background: #ffd100;
+        color: #262626; }
+      .dropdown-bg-light .dropdown-menu .dropdown-item:active {
+        background: #ffd100;
+        color: #262626 !important; }
+      .dropdown-bg-light .dropdown-menu .dropdown-item:hover, .dropdown-bg-light .dropdown-menu .dropdown-item:focus {
+        background: #ffd100;
+        color: #262626 !important; }
 
 body {
   font-family: Arial, 'Sans Serif'; }

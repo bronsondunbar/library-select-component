@@ -142,6 +142,7 @@ render() {
 | Prop              | Values                     |
 | :---------------- | :------------------------- |
 | selectOptions     | Object                     |
+| selectTheme       | light or dark              |
 | showSelectOptions | showSelectOptions function |
 | hideSelectOptions | hideSelectOptions function |
 | placeHolder       | String                     |
