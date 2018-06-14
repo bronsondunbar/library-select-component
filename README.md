@@ -129,6 +129,7 @@ render() {
     <Fragment>
       <Select
         selectOptions={this.selectOptions()}
+        selectTheme="dark"
         showSelectOptions={this.showSelectOptions.bind(this)}
         placeHolder="Please select..."
         selectedText={!this.state.activeSelect ? null : this.state.activeSelect} />
